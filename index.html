@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>100 Receitas para Air Fryer | Receitas Fáceis</title>
+<meta name="description" content="100 receitas rápidas, econômicas e fáceis para a sua air fryer. Acesso imediato por R$ 9,99.">
+<meta property="og:title" content="100 Receitas para Air Fryer">
+<meta property="og:description" content="Receitas rápidas, econômicas e fáceis. Acesso imediato por R$ 9,99.">
+<meta property="og:image" content="imagens/logo.png">
+<link rel="icon" href="imagens/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#17130c; --ink-soft:#4a4336; --yellow:#ffc61a; --yellow-deep:#e0a800;
+  --cream:#fff9e6; --paper:#ffffff; --tomato:#d9381e; --line:#eadfbf;
+  --display:"Bricolage Grotesque","Trebuchet MS",Arial,sans-serif;
+  --body:"Figtree",Arial,Helvetica,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--cream);line-height:1.65;font-size:1.05rem;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--tomato);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+section{padding:72px 0}
+h1,h2,h3{font-family:var(--display);line-height:1.12;letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;margin-bottom:12px}
+.lead{color:var(--ink-soft);max-width:60ch;margin-bottom:36px}
+
+/* Botão */
+.btn{display:inline-block;background:var(--yellow);color:var(--ink);font-family:var(--display);font-weight:800;font-size:1.15rem;padding:18px 34px;border-radius:14px;text-decoration:none;border:2px solid var(--ink);box-shadow:0 5px 0 var(--ink);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(2px);box-shadow:0 3px 0 var(--ink)}
+.btn:active{transform:translateY(5px);box-shadow:0 0 0 var(--ink)}
+
+/* Topo */
+.top{background:var(--ink);color:#fff}
+.top .wrap{display:flex;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px}
+.top img{width:44px;height:44px;border-radius:50%}
+.top strong{font-family:var(--display);font-size:1.1rem;font-weight:800}
+.top a.top-link{margin-left:auto;font-size:.95rem;color:var(--yellow);text-decoration:none;font-weight:700}
+
+/* Hero */
+.hero{background:var(--ink);color:#fff;padding:56px 0 76px}
+.hero .wrap{max-width:860px;text-align:center}
+.hero h1{font-size:clamp(2rem,5.2vw,3.2rem);font-weight:800;color:#fff;margin-bottom:16px}
+.hero h1 span{color:var(--yellow)}
+.hero p.sub{font-size:1.15rem;color:#e9e2cf;max-width:52ch;margin:0 auto 28px}
+.hero .facts{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-top:24px;font-size:.95rem;color:#cfc7b0}
+.hero .facts li{list-style:none}
+.hero .facts li::before{content:"✓ ";color:var(--yellow);font-weight:700}
+
+/* Vídeo (proporção 16:9) */
+.video-box{position:relative;width:100%;aspect-ratio:16/9;margin:0 auto 32px;border-radius:18px;overflow:hidden;background:#000;box-shadow:0 0 0 4px var(--yellow),0 24px 60px rgba(0,0,0,.55)}
+.video-box video,.video-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+
+/* Problema -> solução */
+.promise{background:var(--paper);border-bottom:1px solid var(--line)}
+.promise p{font-family:var(--display);font-size:clamp(1.4rem,3.2vw,2rem);font-weight:600;line-height:1.35;max-width:30ch}
+
+/* Benefícios */
+.benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+.benefit{padding:22px 0;border-top:2px solid var(--ink)}
+.benefit h3{font-size:1.35rem;font-weight:800;margin-bottom:6px}
+.benefit p{color:var(--ink-soft)}
+
+/* Conteúdo */
+.inside{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cats{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px;list-style:none}
+.cats li{display:flex;justify-content:space-between;gap:12px;padding:15px 0;border-bottom:1px solid var(--line);font-weight:600}
+.cats li span{color:var(--ink-soft);font-weight:400;white-space:nowrap}
+.inside .note{margin-top:26px;color:var(--ink-soft)}
+
+/* Oferta */
+.offer{background:var(--yellow)}
+.offer .box{background:var(--ink);color:#fff;border-radius:22px;padding:48px 36px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.offer h2{color:#fff}
+.offer ul{list-style:none;margin-top:18px}
+.offer li{padding:7px 0;color:#e9e2cf}
+.offer li::before{content:"✓ ";color:var(--yellow);font-weight:700}
+.price-box{text-align:center}
+.price-old{text-decoration:line-through;color:#a89f88;font-size:1.1rem}
+.price{font-family:var(--display);font-weight:800;font-size:clamp(3.4rem,8vw,4.6rem);color:var(--yellow);line-height:1;margin:6px 0 4px}
+.price small{font-size:1.1rem;color:#e9e2cf;font-weight:600}
+.price-box .btn{margin-top:22px;width:100%;box-shadow:0 5px 0 #000}
+.secure{margin-top:14px;font-size:.9rem;color:#cfc7b0}
+
+/* Garantia */
+.guarantee .wrap{max-width:760px}
+.guarantee .seal{display:inline-block;font-family:var(--display);font-weight:800;background:var(--tomato);color:#fff;padding:6px 16px;border-radius:999px;margin-bottom:16px;font-size:.95rem}
+
+/* FAQ */
+.faq{background:var(--paper);border-top:1px solid var(--line)}
+.faq .wrap{max-width:760px}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font-family:var(--display);font-weight:800;font-size:1.15rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--tomato);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:10px;color:var(--ink-soft)}
+
+/* Suporte e rodapé */
+.support{text-align:center}
+.support .links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:20px}
+.support .links a{padding:12px 22px;border:2px solid var(--ink);border-radius:12px;font-weight:700;text-decoration:none;background:var(--paper)}
+.support .links a:hover{background:var(--yellow)}
+footer{background:var(--ink);color:#bdb59f;text-align:center;padding:30px 0;font-size:.9rem}
+footer strong{color:#fff}
+
+/* Barra fixa no celular */
+.sticky{display:none}
+
+@media (max-width:760px){
+  section{padding:54px 0}
+  .offer .box{grid-template-columns:1fr}
+  .hero{padding-top:36px}
+  .benefits,.cats{grid-template-columns:1fr}
+  .offer .box{padding:36px 22px}
+  .top a.top-link{display:none}
+  .sticky{display:block;position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--ink);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));box-shadow:0 -6px 20px rgba(0,0,0,.3)}
+  .sticky .btn{display:block;text-align:center;padding:14px;font-size:1.05rem;box-shadow:none}
+  body{padding-bottom:76px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<!-- BARRA DE TOPO -->
+<header class="top">
+  <div class="wrap">
+    <img src="imagens/logo.png" alt="">
+    <strong>Receitas Fáceis</strong>
+    <a class="top-link" href="#oferta">Quero as receitas</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <h1>100 receitas para a sua air fryer, <span>prontas em minutos</span></h1>
+    <p class="sub">Pare de pensar no que fazer para o jantar. Receitas simples, com ingredientes baratos e temperatura e tempo já calculados.</p>
+
+    <!-- VÍDEO: coloque o seu vídeo aqui. Use UMA das duas opções abaixo. -->
+    <div class="video-box">
+      <!-- OPÇÃO 1: vídeo salvo no site. Coloque o arquivo na pasta "videos" com o nome apresentacao.mp4 -->
+      <video controls playsinline preload="metadata" poster="imagens/logo.png">
+        <source src="./assets/video-receita.mp4" type="video/mp4">
+        <source src="./assets/video-receita.mov" type="video/quicktime">
+        <source src="./assets/video-receita.mkv" type="video/x-matroska">
+      </video>
+
+      <!-- OPÇÃO 2: vídeo do YouTube. Apague a OPÇÃO 1 acima, tire os sinais de comentário abaixo e troque ID_DO_VIDEO pelo código do seu vídeo -->
+      <!--
+      <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO" title="Apresentação" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      -->
+    </div>
+
+    <!-- LINK DA KIWIFY (troque aqui se mudar o checkout) -->
+    <a class="btn" href="https://pay.kiwify.com.br/gjpALOz">Quero minhas 100 receitas por R$ 9,99</a>
+    <ul class="facts">
+      <li>Acesso imediato</li>
+      <li>Pagamento seguro pela Kiwify</li>
+      <li>Garantia de 7 dias</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PROMESSA -->
+<section class="promise">
+  <div class="wrap">
+    <p>Menos tempo na cozinha, menos gasto no mercado e mais sabor no prato.</p>
+  </div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section>
+  <div class="wrap">
+    <h2>Por que estas receitas facilitam o seu dia</h2>
+    <p class="lead">Cada receita foi pensada para quem tem pouco tempo e quer comer bem sem complicação.</p>
+    <div class="benefits">
+      <div class="benefit"><h3>Rápidas</h3><p>Receitas prontas em poucos minutos, ideais para a correria da semana.</p></div>
+      <div class="benefit"><h3>Econômicas</h3><p>Ingredientes simples, que cabem no bolso e que você já tem em casa.</p></div>
+      <div class="benefit"><h3>Fáceis</h3><p>Passo a passo claro, com temperatura e tempo certinhos para cada prato.</p></div>
+      <div class="benefit"><h3>Variadas</h3><p>10 categorias, de carnes a sobremesas, para nunca repetir o cardápio.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE TEM DENTRO -->
+<section class="inside">
+  <div class="wrap">
+    <h2>O que você recebe</h2>
+    <p class="lead">100 receitas organizadas em 10 categorias, para você achar o que quer em segundos.</p>
+    <ul class="cats">
+      <li>🍗 Aves <span>10 receitas</span></li>
+      <li>🥩 Carnes <span>10 receitas</span></li>
+      <li>🐟 Peixes e frutos do mar <span>10 receitas</span></li>
+      <li>🥔 Acompanhamentos e batatas <span>10 receitas</span></li>
+      <li>🥦 Legumes e vegetarianas <span>10 receitas</span></li>
+      <li>🥪 Lanches e petiscos <span>10 receitas</span></li>
+      <li>🍳 Café da manhã <span>10 receitas</span></li>
+      <li>🍕 Massas e pizzas <span>10 receitas</span></li>
+      <li>🍰 Sobremesas <span>10 receitas</span></li>
+      <li>⭐ Especiais e criativas <span>10 receitas</span></li>
+    </ul>
+    <p class="note">Cada receita traz ingredientes, modo de preparo, temperatura e tempo.</p>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="offer" id="oferta">
+  <div class="wrap">
+    <div class="box">
+      <div>
+        <h2>Garanta o seu acesso agora</h2>
+        <ul>
+          <li>100 receitas completas</li>
+          <li>Acesso imediato após o pagamento</li>
+          <li>Acesse no celular, tablet ou computador</li>
+          <li>Garantia de 7 dias</li>
+        </ul>
+      </div>
+      <div class="price-box">
+        <div class="price-old">De R$ 29,90</div>
+        <div class="price">R$ 9,99 <small>à vista</small></div>
+        <a class="btn" href="https://pay.kiwify.com.br/gjpALOz">Quero começar agora</a>
+        <p class="secure">Pagamento seguro pela Kiwify</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section class="guarantee">
+  <div class="wrap">
+    <span class="seal">Garantia de 7 dias</span>
+    <h2>Teste sem risco</h2>
+    <p class="lead">Se em até 7 dias você sentir que as receitas não são para você, é só pedir o reembolso pela Kiwify ou falar com o nosso suporte. Sem complicação.</p>
+  </div>
+</section>
+
+<!-- PERGUNTAS FREQUENTES -->
+<section class="faq">
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <details><summary>Como recebo as receitas?</summary><p>Logo após a confirmação do pagamento, você recebe o acesso por e-mail.</p></details>
+    <details><summary>Funciona em qualquer modelo de air fryer?</summary><p>Sim. As receitas trazem temperatura e tempo, que você pode ajustar ao seu aparelho.</p></details>
+    <details><summary>Posso acessar no celular?</summary><p>Pode. O acesso funciona em qualquer celular, tablet ou computador.</p></details>
+    <details><summary>Quais formas de pagamento posso usar?</summary><p>As formas disponíveis aparecem na tela de pagamento da Kiwify, que é segura e rápida.</p></details>
+    <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia para pedir o reembolso.</p></details>
+  </div>
+</section>
+
+<!-- SUPORTE -->
+<section class="support">
+  <div class="wrap">
+    <h2>Ficou com alguma dúvida?</h2>
+    <p class="lead" style="margin-left:auto;margin-right:auto">Fale com a gente. Respondemos de segunda a sexta, em horário comercial.</p>
+    <div class="links">
+      <!-- SUPORTE: troque o e-mail e o número do WhatsApp (55 + DDD + número, sem espaços) -->
+      <a href="mailto:ryoamorim@gmail.com">E-mail</a>
+      <a href="https://wa.me/5532998126720">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Receitas Fáceis</strong> · © 2026 Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- BARRA FIXA (só aparece no celular) -->
+<div class="sticky">
+  <a class="btn" href="https://pay.kiwify.com.br/gjpALOz">Quero as receitas por R$ 9,99</a>
+</div>
+
+</body>
+</html>
