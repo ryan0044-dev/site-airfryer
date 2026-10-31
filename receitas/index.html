@@ -1,150 +1,270 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>100 Receitas para Air Fryer - Rápidas, Econômicas e Fáceis</title>
-  <meta name="description" content="Receba 100 receitas práticas para sua air fryer por apenas R$ 9,99. Acesso imediato em PDF.">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, Helvetica, sans-serif; color: #2b2b2b; background: #fffbea; line-height: 1.6; }
-    .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
-    section { padding: 56px 0; }
-    h1 { font-size: 2.4rem; line-height: 1.2; margin-bottom: 16px; }
-    h2 { font-size: 1.8rem; text-align: center; margin-bottom: 32px; }
-    .hero { background: linear-gradient(135deg, #1c1c1c, #2e2e2e); color: #fff; text-align: center; }
-    .hero h1 { color: #ffc61a; }
-    .hero .logo-hero { width: 220px; max-width: 60%; height: auto; display: block; margin: 0 auto 24px; border-radius: 50%; box-shadow: 0 8px 24px rgba(0,0,0,.5); }
-    .hero p { font-size: 1.2rem; max-width: 640px; margin: 0 auto 28px; }
-    .btn { display: inline-block; background: #ffc61a; color: #1c1c1c; font-weight: bold; font-size: 1.2rem; padding: 18px 36px; border-radius: 50px; text-decoration: none; box-shadow: 0 6px 18px rgba(0,0,0,.2); transition: transform .2s; }
-    .btn:hover { transform: scale(1.05); }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-    .card { background: #fff; border-radius: 14px; padding: 24px; box-shadow: 0 4px 14px rgba(0,0,0,.08); text-align: center; }
-    .card img { width: 100%; height: 160px; object-fit: cover; border-radius: 10px; margin-bottom: 12px; }
-    .card h3 { margin-bottom: 8px; font-size: 1.1rem; }
-    .categories li { background: #fff; margin-bottom: 10px; padding: 14px 18px; border-radius: 10px; list-style: none; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
-    .offer { background: #1c1c1c; color: #fff; text-align: center; }
-    .price-old { text-decoration: line-through; opacity: .6; font-size: 1.2rem; }
-    .price { font-size: 3.2rem; font-weight: bold; color: #ffb400; margin: 8px 0 20px; }
-    .offer ul { list-style: none; margin-bottom: 24px; }
-    .offer li { margin-bottom: 8px; }
-    .testimonials .card { text-align: left; }
-    .stars { color: #ffb400; margin-bottom: 8px; }
-    details { background: #fff; padding: 16px 20px; border-radius: 10px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
-    summary { cursor: pointer; font-weight: bold; }
-    details p { margin-top: 10px; }
-    footer { text-align: center; padding: 28px 0; font-size: .85rem; color: #777; }
-    .topbar { background: #ffc61a; padding: 10px 0; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
-    .topbar img { height: 64px; width: 64px; border-radius: 50%; display: block; margin: 0 auto; }
-    .support { background: #fff3c4; text-align: center; }
-    .support a { color: #b57f00; font-weight: bold; text-decoration: none; }
-    .support p { margin-bottom: 8px; }
-    @media (max-width: 600px) { h1 { font-size: 1.8rem; } .price { font-size: 2.6rem; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>100 Receitas para Air Fryer | Receitas Fáceis</title>
+<meta name="description" content="100 receitas rápidas, econômicas e fáceis para a sua air fryer. E-book em PDF com acesso imediato por R$ 9,99.">
+<meta property="og:title" content="100 Receitas para Air Fryer">
+<meta property="og:description" content="Receitas rápidas, econômicas e fáceis. Acesso imediato em PDF por R$ 9,99.">
+<meta property="og:image" content="imagens/logo.png">
+<link rel="icon" href="imagens/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#17130c; --ink-soft:#4a4336; --yellow:#ffc61a; --yellow-deep:#e0a800;
+  --cream:#fff9e6; --paper:#ffffff; --tomato:#d9381e; --line:#eadfbf;
+  --display:"Bricolage Grotesque","Trebuchet MS",Arial,sans-serif;
+  --body:"Figtree",Arial,Helvetica,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--cream);line-height:1.65;font-size:1.05rem;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--tomato);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+section{padding:72px 0}
+h1,h2,h3{font-family:var(--display);line-height:1.12;letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;margin-bottom:12px}
+.lead{color:var(--ink-soft);max-width:60ch;margin-bottom:36px}
+
+/* Botão */
+.btn{display:inline-block;background:var(--yellow);color:var(--ink);font-family:var(--display);font-weight:800;font-size:1.15rem;padding:18px 34px;border-radius:14px;text-decoration:none;border:2px solid var(--ink);box-shadow:0 5px 0 var(--ink);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(2px);box-shadow:0 3px 0 var(--ink)}
+.btn:active{transform:translateY(5px);box-shadow:0 0 0 var(--ink)}
+
+/* Topo */
+.top{background:var(--ink);color:#fff}
+.top .wrap{display:flex;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px}
+.top img{width:44px;height:44px;border-radius:50%}
+.top strong{font-family:var(--display);font-size:1.1rem;font-weight:800}
+.top a.top-link{margin-left:auto;font-size:.95rem;color:var(--yellow);text-decoration:none;font-weight:700}
+
+/* Hero */
+.hero{background:var(--ink);color:#fff;padding:56px 0 76px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2rem,5.2vw,3.4rem);font-weight:800;color:#fff;margin-bottom:18px}
+.hero h1 span{color:var(--yellow)}
+.hero p.sub{font-size:1.15rem;color:#e9e2cf;max-width:48ch;margin-bottom:26px}
+.hero .facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:.95rem;color:#cfc7b0}
+.hero .facts li{list-style:none}
+.hero .facts li::before{content:"✓ ";color:var(--yellow);font-weight:700}
+.hero .logo{width:min(360px,100%);margin:0 auto;border-radius:50%;box-shadow:0 0 0 6px var(--yellow),0 24px 60px rgba(0,0,0,.55)}
+
+/* Problema -> solução */
+.promise{background:var(--paper);border-bottom:1px solid var(--line)}
+.promise p{font-family:var(--display);font-size:clamp(1.4rem,3.2vw,2rem);font-weight:600;line-height:1.35;max-width:30ch}
+
+/* Benefícios */
+.benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+.benefit{padding:22px 0;border-top:2px solid var(--ink)}
+.benefit h3{font-size:1.35rem;font-weight:800;margin-bottom:6px}
+.benefit p{color:var(--ink-soft)}
+
+/* Conteúdo */
+.inside{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cats{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px;list-style:none}
+.cats li{display:flex;justify-content:space-between;gap:12px;padding:15px 0;border-bottom:1px solid var(--line);font-weight:600}
+.cats li span{color:var(--ink-soft);font-weight:400;white-space:nowrap}
+.inside .note{margin-top:26px;color:var(--ink-soft)}
+
+/* Oferta */
+.offer{background:var(--yellow)}
+.offer .box{background:var(--ink);color:#fff;border-radius:22px;padding:48px 36px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.offer h2{color:#fff}
+.offer ul{list-style:none;margin-top:18px}
+.offer li{padding:7px 0;color:#e9e2cf}
+.offer li::before{content:"✓ ";color:var(--yellow);font-weight:700}
+.price-box{text-align:center}
+.price-old{text-decoration:line-through;color:#a89f88;font-size:1.1rem}
+.price{font-family:var(--display);font-weight:800;font-size:clamp(3.4rem,8vw,4.6rem);color:var(--yellow);line-height:1;margin:6px 0 4px}
+.price small{font-size:1.1rem;color:#e9e2cf;font-weight:600}
+.price-box .btn{margin-top:22px;width:100%;box-shadow:0 5px 0 #000}
+.secure{margin-top:14px;font-size:.9rem;color:#cfc7b0}
+
+/* Garantia */
+.guarantee .wrap{max-width:760px}
+.guarantee .seal{display:inline-block;font-family:var(--display);font-weight:800;background:var(--tomato);color:#fff;padding:6px 16px;border-radius:999px;margin-bottom:16px;font-size:.95rem}
+
+/* FAQ */
+.faq{background:var(--paper);border-top:1px solid var(--line)}
+.faq .wrap{max-width:760px}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font-family:var(--display);font-weight:800;font-size:1.15rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--tomato);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:10px;color:var(--ink-soft)}
+
+/* Suporte e rodapé */
+.support{text-align:center}
+.support .links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:20px}
+.support .links a{padding:12px 22px;border:2px solid var(--ink);border-radius:12px;font-weight:700;text-decoration:none;background:var(--paper)}
+.support .links a:hover{background:var(--yellow)}
+footer{background:var(--ink);color:#bdb59f;text-align:center;padding:30px 0;font-size:.9rem}
+footer strong{color:#fff}
+
+/* Barra fixa no celular */
+.sticky{display:none}
+
+@media (max-width:760px){
+  section{padding:54px 0}
+  .hero .wrap,.offer .box{grid-template-columns:1fr}
+  .hero .logo{width:min(240px,70%);order:-1}
+  .hero{text-align:center;padding-top:36px}
+  .hero p.sub{margin-left:auto;margin-right:auto}
+  .hero .facts{justify-content:center}
+  .benefits,.cats{grid-template-columns:1fr}
+  .offer .box{padding:36px 22px}
+  .top a.top-link{display:none}
+  .sticky{display:block;position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--ink);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));box-shadow:0 -6px 20px rgba(0,0,0,.3)}
+  .sticky .btn{display:block;text-align:center;padding:14px;font-size:1.05rem;box-shadow:none}
+  body{padding-bottom:76px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
 
-  <!-- LOGO: coloque o arquivo da logo na pasta imagens e troque o nome abaixo se precisar -->
-  <div class="topbar">
-    <div class="container">
-      <img src="imagens/logo.png" alt="Logo da loja">
+<!-- BARRA DE TOPO -->
+<header class="top">
+  <div class="wrap">
+    <img src="imagens/logo.png" alt="">
+    <strong>Receitas Fáceis</strong>
+    <a class="top-link" href="#oferta">Quero o e-book</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>100 receitas para a sua air fryer, <span>prontas em minutos</span></h1>
+      <p class="sub">Pare de pensar no que fazer para o jantar. Receitas simples, com ingredientes baratos e temperatura e tempo já calculados.</p>
+      <!-- LINK DA KIWIFY (troque aqui se mudar o checkout) -->
+      <a class="btn" href="https://pay.kiwify.com.br/gjpALOz">Quero meu e-book por R$ 9,99</a>
+      <ul class="facts">
+        <li>Acesso imediato em PDF</li>
+        <li>Pagamento seguro pela Kiwify</li>
+        <li>Garantia de 7 dias</li>
+      </ul>
+    </div>
+    <img class="logo" src="imagens/logo.png" alt="Logo Receitas Fáceis">
+  </div>
+</section>
+
+<!-- PROMESSA -->
+<section class="promise">
+  <div class="wrap">
+    <p>Menos tempo na cozinha, menos gasto no mercado e mais sabor no prato.</p>
+  </div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section>
+  <div class="wrap">
+    <h2>Por que este e-book facilita o seu dia</h2>
+    <p class="lead">Cada receita foi pensada para quem tem pouco tempo e quer comer bem sem complicação.</p>
+    <div class="benefits">
+      <div class="benefit"><h3>Rápidas</h3><p>Receitas prontas em poucos minutos, ideais para a correria da semana.</p></div>
+      <div class="benefit"><h3>Econômicas</h3><p>Ingredientes simples, que cabem no bolso e que você já tem em casa.</p></div>
+      <div class="benefit"><h3>Fáceis</h3><p>Passo a passo claro, com temperatura e tempo certinhos para cada prato.</p></div>
+      <div class="benefit"><h3>Variadas</h3><p>10 categorias, de carnes a sobremesas, para nunca repetir o cardápio.</p></div>
     </div>
   </div>
+</section>
 
-  <!-- TOPO -->
-  <section class="hero">
-    <div class="container">
-      <img class="logo-hero" src="imagens/logo.png" alt="Logo Receitas Fáceis">
-      <h1>100 Receitas para Air Fryer: pratos deliciosos em minutos, gastando pouco</h1>
-      <p>Pare de perder tempo pensando no que cozinhar. Receitas rápidas, econômicas e fáceis para o seu dia a dia.</p>
-      <a class="btn" href="https://pay.kiwify.com.br/gjpALOz">QUERO MEU E-BOOK POR R$ 9,99</a>
-    </div>
-  </section>
+<!-- O QUE TEM DENTRO -->
+<section class="inside">
+  <div class="wrap">
+    <h2>O que você recebe dentro do e-book</h2>
+    <p class="lead">100 receitas organizadas em 10 categorias, para você achar o que quer em segundos.</p>
+    <ul class="cats">
+      <li>🍗 Aves <span>10 receitas</span></li>
+      <li>🥩 Carnes <span>10 receitas</span></li>
+      <li>🐟 Peixes e frutos do mar <span>10 receitas</span></li>
+      <li>🥔 Acompanhamentos e batatas <span>10 receitas</span></li>
+      <li>🥦 Legumes e vegetarianas <span>10 receitas</span></li>
+      <li>🥪 Lanches e petiscos <span>10 receitas</span></li>
+      <li>🍳 Café da manhã <span>10 receitas</span></li>
+      <li>🍕 Massas e pizzas <span>10 receitas</span></li>
+      <li>🍰 Sobremesas <span>10 receitas</span></li>
+      <li>⭐ Especiais e criativas <span>10 receitas</span></li>
+    </ul>
+    <p class="note">Cada receita traz ingredientes, modo de preparo, temperatura e tempo.</p>
+  </div>
+</section>
 
-  <!-- BENEFÍCIOS -->
-  <section>
-    <div class="container">
-      <h2>Por que você vai amar este e-book</h2>
-      <div class="grid">
-        <div class="card"><h3>Rápidas</h3><p>Receitas prontas em poucos minutos, ideais para a correria da semana.</p></div>
-        <div class="card"><h3>Econômicas</h3><p>Ingredientes simples, que cabem no bolso e você já tem em casa.</p></div>
-        <div class="card"><h3>Fáceis</h3><p>Passo a passo claro, com temperatura e tempo certinhos.</p></div>
-        <div class="card"><h3>Variadas</h3><p>10 categorias, de carnes a sobremesas, pra nunca repetir o cardápio.</p></div>
+<!-- OFERTA -->
+<section class="offer" id="oferta">
+  <div class="wrap">
+    <div class="box">
+      <div>
+        <h2>Garanta o seu acesso agora</h2>
+        <ul>
+          <li>E-book com 100 receitas completas</li>
+          <li>Acesso imediato em PDF após o pagamento</li>
+          <li>Leia no celular, tablet ou computador</li>
+          <li>Garantia de 7 dias</li>
+        </ul>
+      </div>
+      <div class="price-box">
+        <div class="price-old">De R$ 29,90</div>
+        <div class="price">R$ 9,99 <small>à vista</small></div>
+        <a class="btn" href="https://pay.kiwify.com.br/gjpALOz">Quero começar agora</a>
+        <p class="secure">Pagamento seguro pela Kiwify</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- O QUE TEM DENTRO -->
-  <section style="background:#fff3c4;">
-    <div class="container">
-      <h2>O que você recebe dentro do e-book</h2>
-      <ul class="categories">
-        <li>🍗 10 receitas de aves</li>
-        <li>🥩 10 receitas de carnes</li>
-        <li>🐟 10 receitas de peixes e frutos do mar</li>
-        <li>🥔 10 receitas de acompanhamentos e batatas</li>
-        <li>🥦 10 receitas de legumes e vegetarianas</li>
-        <li>🥪 10 receitas de lanches e petiscos</li>
-        <li>🍳 10 receitas de café da manhã</li>
-        <li>🍕 10 receitas de massas e pizzas</li>
-        <li>🍰 10 receitas de sobremesas</li>
-        <li>⭐ 10 receitas especiais e criativas</li>
-      </ul>
-      <p style="text-align:center;margin-top:20px;">Cada receita traz ingredientes, modo de preparo, temperatura e tempo.</p>
+<!-- GARANTIA -->
+<section class="guarantee">
+  <div class="wrap">
+    <span class="seal">Garantia de 7 dias</span>
+    <h2>Teste sem risco</h2>
+    <p class="lead">Se em até 7 dias você sentir que o e-book não é para você, é só pedir o reembolso pela Kiwify ou falar com o nosso suporte. Sem complicação.</p>
+  </div>
+</section>
+
+<!-- PERGUNTAS FREQUENTES -->
+<section class="faq">
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <details><summary>Como recebo o e-book?</summary><p>Logo após a confirmação do pagamento, você recebe o acesso ao PDF por e-mail.</p></details>
+    <details><summary>Funciona em qualquer modelo de air fryer?</summary><p>Sim. As receitas trazem temperatura e tempo, que você pode ajustar ao seu aparelho.</p></details>
+    <details><summary>Posso ler no celular?</summary><p>Pode. O arquivo é em PDF e abre em qualquer celular, tablet ou computador.</p></details>
+    <details><summary>Quais formas de pagamento posso usar?</summary><p>As formas disponíveis aparecem na tela de pagamento da Kiwify, que é segura e rápida.</p></details>
+    <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia para pedir o reembolso.</p></details>
+  </div>
+</section>
+
+<!-- SUPORTE -->
+<section class="support">
+  <div class="wrap">
+    <h2>Ficou com alguma dúvida?</h2>
+    <p class="lead" style="margin-left:auto;margin-right:auto">Fale com a gente. Respondemos de segunda a sexta, em horário comercial.</p>
+    <div class="links">
+      <!-- SUPORTE: troque o e-mail e o número do WhatsApp (55 + DDD + número, sem espaços) -->
+      <a href="mailto:ryoamorim@gmail.com">E-mail</a>
+      <a href="https://wa.me/5532998126720">WhatsApp</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PROVA SOCIAL (troque por depoimentos reais quando tiver) -->
-  <section class="testimonials">
-    <div class="container">
-      <h2>O que as pessoas estão dizendo</h2>
-      <div class="grid">
-        <div class="card"><div class="stars">★★★★★</div><p>"Receitas simples e que realmente funcionam. Minha air fryer não para mais!"</p><strong>- Mayra Oliveira</strong></div>
-        <div class="card"><div class="stars">★★★★★</div><p>"Pelo preço, é um achado. Já fiz várias receitas na semana."</p><strong>- Monica Fernandes</strong></div>
-        <div class="card"><div class="stars">★★★★★</div><p>"Prático, rápido e sem complicação. Recomendo!"</p><strong>- Luiz Santana</strong></div>
-      </div>
-    </div>
-  </section>
+<footer>
+  <div class="wrap">
+    <p><strong>Receitas Fáceis</strong> · © 2026 Todos os direitos reservados.</p>
+  </div>
+</footer>
 
-  <!-- OFERTA -->
-  <section class="offer">
-    <div class="container">
-      <h2>Garanta agora o seu acesso</h2>
-      <ul>
-        <li>✅ E-book com 100 receitas completas</li>
-        <li>✅ Acesso imediato em PDF</li>
-        <li>✅ Leia no celular, tablet ou computador</li>
-      </ul>
-      <div class="price-old">De R$ 29,90</div>
-      <div class="price">por apenas R$ 9,99</div>
-      <a class="btn" href="https://pay.kiwify.com.br/gjpALOz">QUERO COMEÇAR AGORA</a>
-      <p style="margin-top:16px;font-size:.9rem;opacity:.8;">Pagamento seguro pela Kiwify</p>
-    </div>
-  </section>
-
-  <!-- PERGUNTAS FREQUENTES -->
-  <section>
-    <div class="container">
-      <h2>Perguntas frequentes</h2>
-      <details><summary>Como recebo o e-book?</summary><p>Logo após a confirmação do pagamento, você recebe o acesso ao PDF por e-mail.</p></details>
-      <details><summary>Funciona em qualquer modelo de air fryer?</summary><p>Sim. As receitas trazem temperatura e tempo, que você pode ajustar ao seu aparelho.</p></details>
-      <details><summary>Posso ler no celular?</summary><p>Pode! O arquivo é em PDF e abre em qualquer dispositivo.</p></details>
-    </div>
-  </section>
-
-  <!-- SUPORTE: troque o e-mail e o numero do WhatsApp abaixo (numero com 55 + DDD, sem espacos) -->
-  <section class="support">
-    <div class="container">
-      <h2>Precisa de ajuda? Fale com o suporte</h2>
-      <p>E-mail: <a href="ryoamorim@gmail.com">ryoamorim@gmail.com</a></p>
-      <p>WhatsApp: <a href="https://wa.me/5532998126720">Clique para chamar</a></p>
-      <p>Atendimento de segunda a sexta, em horário comercial.</p>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">© 2026 100 Receitas para Air Fryer. Todos os direitos reservados.</div>
-  </footer>
+<!-- BARRA FIXA (só aparece no celular) -->
+<div class="sticky">
+  <a class="btn" href="https://pay.kiwify.com.br/gjpALOz">Quero o e-book por R$ 9,99</a>
+</div>
 
 </body>
 </html>
